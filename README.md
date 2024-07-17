@@ -1,3 +1,18 @@
-wasm-tools component embed --world=client ../wit/wit main.wasm -o main.clientembed.wasm
-wasm-tools component embed --world=app ../wit/wit main.clientembed.wasm -o main.app.wasm
-wasm-tools component new -o main.component.wasm --adapt wasi_snapshot_preview1=wasi_snapshot_preview1.reactor.wasm main.app.wasm
+# Wasi-tinygo
+
+This repo contains example uses for [hayride-dev/wasi](https://github.com/hayride-dev/wasi). Currently the main focus in on wasi-http and non core wasi implementations.
+
+## Make/run
+
+This repo uses tiny-go and the wasip2 implemenation. We recommend using the dev branch of tinygo and building from source to ensure use of that latest code. 
+
+We are also uses wasmtime and currently have not tested other wasi runtimes.
+
+### Building 
+
+`make` or `make main.wasm` 
+
+### Running 
+
+`make run`
+
